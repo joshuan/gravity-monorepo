@@ -57,6 +57,7 @@ importers:
       '@gravity-ui/app-layout': 1.2.0
       '@gravity-ui/eslint-config': 2.0.0
       '@gravity-ui/expresskit': 0.2.0
+      '@gravity-ui/i18n': 1.1.0
       '@gravity-ui/nodekit': 0.2.0
       '@gravity-ui/prettier-config': 1.0.1
       '@types/express': 4.17.17
@@ -72,6 +73,7 @@ importers:
     dependencies:
       '@gravity-ui/app-layout': 1.2.0
       '@gravity-ui/expresskit': 0.2.0_axios@0.21.4
+      '@gravity-ui/i18n': 1.1.0
       '@gravity-ui/nodekit': 0.2.0_axios@0.21.4
       axios: 0.21.4
       calculator: link:../../packages/calculator
@@ -3019,6 +3021,10 @@ packages:
     transitivePeerDependencies:
       - axios
       - supports-color
+    dev: false
+
+  /@gravity-ui/i18n/1.1.0:
+    resolution: {integrity: sha512-Ck+LNE1S2GGaMKMijIYWogiM/tYk0wHPlqLrhZmzp6P5keIu8YnPDeIlwAzq4eYVSrtTudLmshFB9QmYAeLryQ==}
     dev: false
 
   /@gravity-ui/nodekit/0.2.0_axios@0.21.4:

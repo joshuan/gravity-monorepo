@@ -21,6 +21,7 @@
   "dependencies": {
     "@gravity-ui/app-layout": "1.2.0",
     "@gravity-ui/expresskit": "0.2.0",
+    "@gravity-ui/i18n": "1.1.0",
     "@gravity-ui/nodekit": "0.2.0",
     "axios": "^0.21.4",
     "calculator": "workspace:0.0.1",
