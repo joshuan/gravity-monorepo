@@ -4,7 +4,8 @@
   "description": "WWW server",
   "private": true,
   "scripts": {
-    "build": "tsc -p .",
+    "build": "app-builder build",
+    "dev": "app-builder dev",
     "clean": "rimraf dist",
     "start": "node dist/index.js"
   },
@@ -17,10 +18,13 @@
     "axios": "^0.21.4",
     "calculator": "workspace:0.0.1",
     "cookie-parser": "1.4.6",
+    "moment-timezone": ">= 0.1.0",
     "typescript": "5.0.4"
   },
   "devDependencies": {
+    "@gravity-ui/app-builder": "0.4.1",
     "@types/express": "4.17.17",
+    "@types/node": "18.13.0",
     "rimraf": "5.0.1"
   }
 }
