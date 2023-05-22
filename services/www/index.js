@@ -1,12 +1,12 @@
-const http = require('http');
-const calculator = require('calculator');
+const { NodeKit } = require('@gravity-ui/nodekit');
+const { ExpressKit } = require('@gravity-ui/expresskit');
 
-const server = http.createServer((req, res) => {
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  
-  res.end(`This is WWW server! 1 + 2 = ${calculator(1, 2)}`);
+const routes = require('./routes');
+
+const nodekit = new NodeKit({
+  configsPath: './configs',
 });
 
-server.listen(8080, 'localhost', () => {
-  console.log('WWW server was started: http://localhost:8080/');
-});
+const app = new ExpressKit(nodekit, routes);
+
+app.run();
