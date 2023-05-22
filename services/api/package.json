@@ -1,0 +1,13 @@
+{
+  "name": "api",
+  "version": "0.0.0",
+  "description": "API server",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
