@@ -54,6 +54,7 @@ importers:
   services/www:
     specifiers:
       '@gravity-ui/app-builder': 0.4.1
+      '@gravity-ui/app-layout': 1.2.0
       '@gravity-ui/eslint-config': 2.0.0
       '@gravity-ui/expresskit': 0.2.0
       '@gravity-ui/nodekit': 0.2.0
@@ -69,6 +70,7 @@ importers:
       rimraf: 5.0.1
       typescript: 5.0.4
     dependencies:
+      '@gravity-ui/app-layout': 1.2.0
       '@gravity-ui/expresskit': 0.2.0_axios@0.21.4
       '@gravity-ui/nodekit': 0.2.0_axios@0.21.4
       axios: 0.21.4
@@ -2975,6 +2977,12 @@ packages:
       - webpack-hot-middleware
       - webpack-plugin-serve
     dev: true
+
+  /@gravity-ui/app-layout/1.2.0:
+    resolution: {integrity: sha512-BHroqvyruTMi8GtDe5TMKi7DLrIAG5E031k0WqhjUt+IK2FIqv46JurAfgmlnZWCyzIh7f+CB+0G6B9ukaDJnQ==}
+    dependencies:
+      htmlescape: 1.1.1
+    dev: false
 
   /@gravity-ui/eslint-config/2.0.0_196046eb91e4baabe2fb6c9a3c9c53ab:
     resolution: {integrity: sha512-kSzV4nwHnR7yDs40TLxFHg1RProMNUxT7ZFFgbmhN1WNe5RdjDWAj0y6apQJUt3V6dfUm+7gQQc5SwStmHHoMQ==}
@@ -6084,6 +6092,11 @@ packages:
   /html-entities/2.3.3:
     resolution: {integrity: sha512-DV5Ln36z34NNTDgnz0EWGBLZENelNAtkiFA4kyNOG2tDI6Mz1uSWiq1wAKdyjnJwyDiDO7Fa2SO1CTxPXL8VxA==}
     dev: true
+
+  /htmlescape/1.1.1:
+    resolution: {integrity: sha512-eVcrzgbR4tim7c7soKQKtxa/kQM4TzjnlU83rcZ9bHU6t31ehfV7SktN6McWgwPWg+JYMA/O3qpGxBvFq1z2Jg==}
+    engines: {node: '>=0.10'}
+    dev: false
 
   /http-deceiver/1.2.7:
     resolution: {integrity: sha512-LmpOGxTfbpgtGVxJrj5k7asXHCgNZp5nLfp+hWc8QQRqtb7fUy6kRY3BO1h9ddF6yIPYUARgxGOwB42DnxIaNw==}
