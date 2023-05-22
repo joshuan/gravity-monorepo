@@ -1,5 +1,5 @@
-import { NodeKit } from '@gravity-ui/nodekit';
-import { ExpressKit } from '@gravity-ui/expresskit';
+import {ExpressKit} from '@gravity-ui/expresskit';
+import {NodeKit} from '@gravity-ui/nodekit';
 
 import routes from './routes';
 

@@ -1,3 +1,5 @@
-export default function calc(a: number, b: number): number {
+function calc(a: number, b: number): number {
     return a + b;
-};
+}
+
+export default calc;
