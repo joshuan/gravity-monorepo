@@ -1,0 +1,21 @@
+lockfileVersion: 5.3
+
+importers:
+
+  .:
+    specifiers: {}
+
+  packages/calculator:
+    specifiers: {}
+
+  services/api:
+    specifiers:
+      calculator: workspace:0.0.1
+    dependencies:
+      calculator: link:../../packages/calculator
+
+  services/www:
+    specifiers:
+      calculator: workspace:0.0.1
+    dependencies:
+      calculator: link:../../packages/calculator
