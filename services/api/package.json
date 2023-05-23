@@ -32,6 +32,7 @@
     "@gravity-ui/prettier-config": "1.0.1",
     "@types/express": "4.17.17",
     "@types/node": "18.13.0",
+    "dto": "workspace:0.0.1",
     "eslint": "8.41.0",
     "nodemon": "2.0.22",
     "prettier": "2.8.8",

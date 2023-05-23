@@ -1,13 +1,9 @@
 import {JSONSchemaType} from 'ajv';
 import calc from 'calculator';
+import type {CalcRequest, CalcResponse} from 'dto';
 import type {Request as ExpressRequest, Response as ExpressResponse} from 'express';
 
 import {validate} from '../lib/validate';
-
-interface CalcRequest {
-    a: number;
-    b: number;
-}
 
 const calcSchema: JSONSchemaType<CalcRequest> = {
     type: 'object',
@@ -17,11 +13,6 @@ const calcSchema: JSONSchemaType<CalcRequest> = {
     },
     required: ['a', 'b'],
 };
-
-interface CalcResponse {
-    input: [number, number];
-    result: number;
-}
 
 export const calcController = (req: ExpressRequest, res: ExpressResponse) => {
     validate(calcSchema, req.body);
