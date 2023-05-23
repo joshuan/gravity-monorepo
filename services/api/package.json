@@ -4,6 +4,7 @@
   "description": "API server",
   "private": true,
   "scripts": {
+    "dev": "nodemon -w src -e js,ts,json -x \"ts-node src\"",
     "build": "tsc -p .",
     "clean": "rimraf dist",
     "eslint:check": "eslint . --ext .ts,.tsx",
@@ -20,6 +21,7 @@
   "dependencies": {
     "@gravity-ui/expresskit": "0.2.0",
     "@gravity-ui/nodekit": "0.2.0",
+    "ajv": "8.12.0",
     "axios": "^0.21.4",
     "calculator": "workspace:0.0.1",
     "cookie-parser": "1.4.6",
@@ -29,8 +31,11 @@
     "@gravity-ui/eslint-config": "2.0.0",
     "@gravity-ui/prettier-config": "1.0.1",
     "@types/express": "4.17.17",
+    "@types/node": "18.13.0",
     "eslint": "8.41.0",
+    "nodemon": "2.0.22",
     "prettier": "2.8.8",
-    "rimraf": "5.0.1"
+    "rimraf": "5.0.1",
+    "ts-node": "10.9.1"
   }
 }
