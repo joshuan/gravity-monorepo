@@ -3,24 +3,33 @@ import React from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 
 import {RootState} from '../state';
-import {calculate} from '../state/calculator';
+import {usePlusMutation} from '../state/api';
+import {setA, setB} from '../state/calculator';
 
 export const Calculator = () => {
-    const result = useSelector((state: RootState) => state.calculator.result);
+    const a = useSelector((state: RootState) => state.calculator.a);
+    const b = useSelector((state: RootState) => state.calculator.b);
     const dispatch = useDispatch();
 
-    const [a, setA] = React.useState<number>(0);
-    const [b, setB] = React.useState<number>(0);
+    const [plus, {isLoading}] = usePlusMutation();
+
+    const [result, setResult] = React.useState<number>(0);
 
     const handleChangeA = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setA(Number(event.target.value));
+        dispatch(setA(Number(event.target.value)));
     };
     const handleChangeB = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setB(Number(event.target.value));
+        dispatch(setB(Number(event.target.value)));
     };
 
-    const handleCalculate = () => {
-        dispatch(calculate({x: a, y: b}));
+    const handleCalculate = async () => {
+        const res = await plus({a, b});
+
+        if ('error' in res) {
+            throw res.error;
+        }
+
+        setResult(res.data.result);
     };
 
     return (
@@ -34,11 +43,13 @@ export const Calculator = () => {
             </p>
             <hr />
             <p>
-                <Button onClick={handleCalculate}>Calculate</Button>
+                <Button view="action" loading={isLoading} onClick={handleCalculate}>
+                    Calculate
+                </Button>
             </p>
-            <p>
-                Result: <TextInput disabled value={String(result)} />
-            </p>
+            <h3>
+                Result: <strong>{isLoading ? '...' : result}</strong>
+            </h3>
         </fieldset>
     );
 };

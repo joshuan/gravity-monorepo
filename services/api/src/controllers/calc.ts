@@ -14,6 +14,12 @@ const calcSchema: JSONSchemaType<CalcRequest> = {
     required: ['a', 'b'],
 };
 
+export const calcCorsOptions = {
+    origin: 'http://localhost:8080',
+    methods: ['POST'],
+    allowedHeaders: ['Content-Type'],
+};
+
 export const calcController = (req: ExpressRequest, res: ExpressResponse) => {
     validate(calcSchema, req.body);
 

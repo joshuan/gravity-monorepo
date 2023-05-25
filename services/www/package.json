@@ -41,6 +41,7 @@
     "@types/node": "18.13.0",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
+    "dto": "workspace:0.0.1",
     "eslint": "8.41.0",
     "prettier": "2.8.8",
     "react": "18.2.0",
