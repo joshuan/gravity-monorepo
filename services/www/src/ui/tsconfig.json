@@ -1,7 +1,17 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
+    "jsx": "react",
+
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
+
     "resolveJsonModule": true,
-    "jsx": "react"
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "strict": true,
+    "noUncheckedIndexedAccess": true
   }
 }

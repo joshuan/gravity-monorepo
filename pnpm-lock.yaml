@@ -78,6 +78,7 @@ importers:
 
   services/www:
     specifiers:
+      '@babel/runtime': 7.21.5
       '@gravity-ui/app-builder': 0.4.1
       '@gravity-ui/app-layout': 1.2.0
       '@gravity-ui/eslint-config': 2.0.0
@@ -94,6 +95,7 @@ importers:
       calculator: workspace:0.0.1
       cookie-parser: 1.4.6
       eslint: 8.41.0
+      express: 4.18.2
       moment-timezone: '>= 0.1.0'
       prettier: 2.8.8
       react: 18.2.0
@@ -108,9 +110,11 @@ importers:
       axios: 0.21.4
       calculator: link:../../packages/calculator
       cookie-parser: 1.4.6
+      express: 4.18.2
       moment-timezone: 0.5.43
       typescript: 5.0.4
     devDependencies:
+      '@babel/runtime': 7.21.5
       '@gravity-ui/app-builder': 0.4.1_c747a8a3520eec1de7a895878056a37d
       '@gravity-ui/eslint-config': 2.0.0_196046eb91e4baabe2fb6c9a3c9c53ab
       '@gravity-ui/prettier-config': 1.0.1_prettier@2.8.8
