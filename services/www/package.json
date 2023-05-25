@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "build": "app-builder build",
-    "dev": "app-builder dev",
+    "dev": "APP_DEV_MODE=true app-builder dev",
     "clean": "rimraf dist",
     "start": "node dist/index.js",
     "eslint:check": "eslint . --ext .ts,.tsx",

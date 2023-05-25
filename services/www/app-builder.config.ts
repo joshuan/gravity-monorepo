@@ -2,6 +2,7 @@ import type {ServiceConfig} from '@gravity-ui/app-builder';
 
 const config: ServiceConfig = {
     client: {
+        disableReactRefresh: true,
         devServer: {
             port: 8080,
         },

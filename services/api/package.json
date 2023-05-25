@@ -4,7 +4,7 @@
   "description": "API server",
   "private": true,
   "scripts": {
-    "dev": "nodemon -w src -e js,ts,json -x \"ts-node src\"",
+    "dev": "APP_DEV_MODE=true nodemon -w src -e js,ts,json -x \"ts-node src\"",
     "build": "tsc -p .",
     "clean": "rimraf dist",
     "eslint:check": "eslint . --ext .ts,.tsx",
