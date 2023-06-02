@@ -2,12 +2,13 @@ import cors from 'cors';
 
 import {calcController, calcCorsOptions} from './controllers/calc';
 import {mainController} from './controllers/main';
+import {AppRoutes} from '@gravity-ui/expresskit';
 
 const nullController = () => {
     throw new Error('Null controller');
 };
 
-export default {
+export const routes: AppRoutes = {
     'GET /': mainController,
     'OPTIONS /calc': {
         beforeAuth: [cors(calcCorsOptions)],

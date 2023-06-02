@@ -2,5 +2,9 @@
   "name": "gravity-demo-monorepo",
   "private": true,
   "author": "Joshuan <joshuan.chel@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "engines": {
+    "node": "18.12.1",
+    "pnpm": "6.34.0"
+  }
 }
